@@ -42,7 +42,7 @@ StartChat's core features include:
 ### Method 1: With pip
 
 ```bash
-pip3 install "fschat[model_worker,webui]"
+pip3 install "startchat[model_worker,webui]"
 ```
 
 ### Method 2: From source
