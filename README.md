@@ -295,7 +295,7 @@ We use similar hyperparameters as the Stanford Alpaca.
 
 - Install dependency
 ```bash
-pip3 install -e ".[train]"
+pip3 install -r ./fine_tune_requirements.txt
 ```
 
 - You can use the following command to train Vicuna-7B with 4 x A100 (40GB). Update `--model_name_or_path` with the actual path to Llama weights and `--data_path` with the actual path to data.
