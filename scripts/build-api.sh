@@ -7,7 +7,7 @@ PROJECT_DIR="$(pwd)"
 CONDA_ENV_NAME="startchat" #
 
 MODEL_PATH="HuggingFaceH4/zephyr-7b-beta" #beta is better than the alpha version, base model w/o quantization
-MODEL_PATH="lmsys/vicuna-7b-v1.5" 
+MODEL_PATH="lmsys/vicuna-7b-v1.5"
 
 API_HOST="0.0.0.0"
 API_PORT_NUMBER=8000
@@ -47,7 +47,7 @@ for screen in "${SCREENNAMES[@]}"; do
     # also activate the conda compute environment for these
     screen -DRRS "$screen" -X stuff "conda deactivate \r"
     screen -DRRS "$screen" -X stuff "conda activate $CONDA_ENV_NAME \r"
-    
+
 done
 
 

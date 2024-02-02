@@ -43,7 +43,7 @@ python3 -m startchat.serve.model_worker \
 
 `--exllama-cache-8bit` can be used to enable 8-bit caching with exllama and save some VRAM.
 
-## Performance 
+## Performance
 
 Reference: https://github.com/turboderp/exllamav2#performance
 

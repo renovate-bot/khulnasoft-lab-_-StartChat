@@ -24,7 +24,7 @@ torchrun --nproc_per_node=4 --master_port=9778 startchat/train/train_flant5.py \
     --tf32 True \
     --model_max_length 2048 \
     --preprocessed_path ./preprocessed_data/processed.json \
-    --gradient_checkpointing True 
+    --gradient_checkpointing True
 ```
 
 After training, please use our post-processing [function](https://github.com/khulnasoft-lab/StartChat/blob/55051ad0f23fef5eeecbda14a2e3e128ffcb2a98/startchat/utils.py#L166-L185) to update the saved model weight. Additional discussions can be found [here](https://github.com/khulnasoft-lab/StartChat/issues/643).
@@ -85,7 +85,7 @@ deepspeed startchat/train/train_lora_t5.py \
         --gradient_checkpointing True \
         --q_lora True     \
         --deepspeed playground/deepspeed_config_s2.json
-        
+
 ```
 
 ### Fine-tuning Vicuna-7B with Local NPUs

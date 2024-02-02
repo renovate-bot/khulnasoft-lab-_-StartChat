@@ -21,7 +21,7 @@ python ./tools/chatglm_convert.py -i ${HF_DATASET_DIR} -o  ${OUTPUT_DIR}
 --enable-xft to enable xfastertransformer in Startchat
 --xft-max-seq-len to set the max token length the model can process. max token length include input token length.
 --xft-dtype to set datatype used in xFasterTransformer for computation. xFasterTransformer can support fp32, fp16, int8, bf16 and hybrid data types like : bf16_fp16, bf16_int8. For datatype details please refer to [this link](https://github.com/intel/xFasterTransformer/wiki/Data-Type-Support-Platform)
-    
+
 
 Chat with the CLI:
 ```bash
@@ -45,7 +45,7 @@ or using MPI to run inference on 2 sockets for better performance
 #run inference on numanode 0 and 1 and with data type bf16_fp16 (first token uses bfloat16, and rest tokens use float16)
 OMP_NUM_THREADS=$CORE_NUM_PER_SOCKET LD_PRELOAD=libiomp5.so mpirun \
 -n 1 numactl -N 0  --localalloc \
-python -m startchat.serve.cli \ 
+python -m startchat.serve.cli \
     --model-path /path/to/models/chatglm2_6b_cpu/ \
     --enable-xft \
     --xft-dtype bf16_fp16 : \
@@ -63,7 +63,7 @@ Start model worker:
 python3 -m startchat.serve.model_worker \
     --model-path /path/to/models \
     --enable-xft \
-    --xft-dtype bf16_fp16 
+    --xft-dtype bf16_fp16
 ```
 or with numactl on multi-socket server for better performance
 ```bash
@@ -71,7 +71,7 @@ or with numactl on multi-socket server for better performance
 numactl -N 0  --localalloc python3 -m startchat.serve.model_worker \
     --model-path /path/to/models \
     --enable-xft \
-    --xft-dtype bf16_fp16 
+    --xft-dtype bf16_fp16
 ```
 or using MPI to run inference on 2 sockets for better performance
 ```bash
@@ -84,7 +84,7 @@ OMP_NUM_THREADS=$CORE_NUM_PER_SOCKET LD_PRELOAD=libiomp5.so mpirun \
 -n 1 numactl -N 1  --localalloc  python -m startchat.serve.model_worker \
     --model-path /path/to/models \
     --enable-xft \
-    --xft-dtype bf16_fp16 
+    --xft-dtype bf16_fp16
 ```
 
-For more details, please refer to [this link](https://github.com/intel/xFasterTransformer#how-to-run) 
+For more details, please refer to [this link](https://github.com/intel/xFasterTransformer#how-to-run)

@@ -142,7 +142,9 @@ def replace_llama_attn_with_flash_attn():
 
 
 def test():
-    from startchat.train.llama_flash_attn_monkey_patch import forward as startchat_forward
+    from startchat.train.llama_flash_attn_monkey_patch import (
+        forward as startchat_forward,
+    )
     from transformers.models.llama.configuration_llama import LlamaConfig
 
     config = LlamaConfig(
