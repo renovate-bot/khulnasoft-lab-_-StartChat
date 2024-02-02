@@ -704,7 +704,7 @@ class VicunaAdapter(BaseModelAdapter):
                 "current startchat.\nYou can try one of the following methods:\n"
                 "1. Upgrade your weights to the new Vicuna-v1.3: https://github.com/khulnasoft-lab/StartChat#vicuna-weights.\n"
                 "2. Use the old conversation template by `python3 -m startchat.serve.cli --model-path /path/to/vicuna-v0 --conv-template one_shot`\n"
-                "3. Downgrade fschat to fschat==0.1.10 (Not recommended).\n"
+                "3. Downgrade startchat to startchat==0.1.10 (Not recommended).\n"
             )
 
 

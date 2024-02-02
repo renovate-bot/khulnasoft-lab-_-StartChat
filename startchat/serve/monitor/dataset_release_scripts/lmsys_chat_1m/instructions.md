@@ -20,4 +20,3 @@ python3 compute_stats.py --in $BASE.s1.json --scale $SCALE
 # Copy figures
 scp "atlas:/data/lmzheng/StartChat/startchat/serve/monitor/dataset_release_scripts/lmsys_chat_1m/*.pdf" .
 ```
-

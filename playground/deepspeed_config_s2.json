@@ -6,7 +6,7 @@
     },
     "contiguous_gradients": true,
     "overlap_comm": true
-  },  
+  },
   "fp16": {
     "enabled": "auto"
   },

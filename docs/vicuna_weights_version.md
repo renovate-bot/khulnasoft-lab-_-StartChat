@@ -55,7 +55,7 @@ You can add our delta to the original LLaMA weights to obtain the Vicuna weights
 2. Use the following scripts to get Vicuna weights by applying our delta. They will automatically download delta weights from our Hugging Face [account](https://huggingface.co/lmsys).
 
 **NOTE**:
-Weights v1.1 are only compatible with ```transformers>=4.28.0``` and ``fschat >= 0.2.0``.
+Weights v1.1 are only compatible with ```transformers>=4.28.0``` and ``startchat >= 0.2.0``.
 Please update your local packages accordingly. If you follow the above commands to do a fresh install, then you should get all the correct versions.
 
 #### Vicuna-7B

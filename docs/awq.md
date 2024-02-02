@@ -16,7 +16,7 @@ git clone https://github.com/mit-han-lab/llm-awq repositories/llm-awq
 cd repositories/llm-awq
 pip install -e .             # install awq package
 
-cd awq/kernels				
+cd awq/kernels
 python setup.py install	     # install awq CUDA kernels
 ```
 
@@ -32,12 +32,12 @@ git clone https://huggingface.co/mit-han-lab/vicuna-7b-v1.3-4bit-g128-awq
 python3 -m startchat.serve.cli \
     --model-path models/vicuna-7b-v1.3-4bit-g128-awq \
     --awq-wbits 4 \
-    --awq-groupsize 128 
+    --awq-groupsize 128
 ```
 
 ## Benchmark
 
-* Through **4-bit weight quantization**, AWQ helps to run larger language models within the device memory restriction and prominently accelerates token generation. All benchmarks are done with group_size 128. 
+* Through **4-bit weight quantization**, AWQ helps to run larger language models within the device memory restriction and prominently accelerates token generation. All benchmarks are done with group_size 128.
 
 * Benchmark on NVIDIA RTX A6000:
 

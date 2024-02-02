@@ -42,7 +42,7 @@ StartChat's core features include:
 ### Method 1: With pip
 
 ```bash
-pip3 install "fschat[model_worker,webui]"
+pip3 install "startchat[model_worker,webui]"
 ```
 
 ### Method 2: From source
@@ -120,7 +120,7 @@ python3 -m startchat.serve.cli --model-path lmsys/vicuna-7b-v1.5
 ```
 
 #### Multiple GPUs
-You can use model parallelism to aggregate GPU memory from multiple GPUs on the same machine. 
+You can use model parallelism to aggregate GPU memory from multiple GPUs on the same machine.
 ```
 python3 -m startchat.serve.cli --model-path lmsys/vicuna-7b-v1.5 --num-gpus 2
 ```
@@ -270,7 +270,7 @@ See [startchat/serve/huggingface_api.py](startchat/serve/huggingface_api.py).
 See [docs/langchain_integration](docs/langchain_integration.md).
 
 ## Evaluation
-We use MT-bench, a set of challenging multi-turn open-ended questions to evaluate models. 
+We use MT-bench, a set of challenging multi-turn open-ended questions to evaluate models.
 To automate the evaluation process, we prompt strong LLMs like GPT-4 to act as judges and assess the quality of the models' responses.
 See instructions for running MT-bench at [startchat/llm_judge](startchat/llm_judge).
 

@@ -21,7 +21,10 @@ from startchat.llm_judge.common import (
     chat_completion_palm,
 )
 from startchat.llm_judge.gen_model_answer import reorg_answer_file
-from startchat.model.model_adapter import get_conversation_template, ANTHROPIC_MODEL_LIST
+from startchat.model.model_adapter import (
+    get_conversation_template,
+    ANTHROPIC_MODEL_LIST,
+)
 
 
 def get_answer(
