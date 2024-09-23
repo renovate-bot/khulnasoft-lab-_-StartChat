@@ -14,7 +14,7 @@ huggingface_hub==0.20.3
 grpcio-tools==1.48.2
 bitsandbytes==0.42.0
 sentencepiece==0.1.99
-safetensors==0.4.2
+safetensors==0.4.5
 datasets==2.16.1
 texttable==1.7.0
 toml==0.10.2
